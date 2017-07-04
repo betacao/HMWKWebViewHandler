@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+use_frameworks!
+target 'HMWKWebViewHandler' do
+pod 'AFNetworking'
+pod 'HMWKWebViewHandler',:git=>"https://github.com/caochangxi/HMWKWebViewHandler.git"
+end

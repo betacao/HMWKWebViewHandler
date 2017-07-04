@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HMWKWebViewHandler"
 
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
 
   s.summary      = "JS & OC"
 
@@ -20,7 +20,7 @@ TODO: JS & OC Calling Each Other
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HMWKWebViewHandler/Classes/**/*.{h,m}'
+  s.source_files = 'HMWKWebViewHandler/Classes/*.{h,m}'
 
   s.resources    = 'HMWKWebViewHandler/Resources/*.js'
 
