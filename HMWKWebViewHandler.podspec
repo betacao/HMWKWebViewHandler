@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HMWKWebViewHandler"
 
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
 
   s.summary      = "JS & OC"
 
@@ -24,7 +24,7 @@ TODO: JS & OC Calling Each Other
 
   s.resources    = 'HMWKWebViewHandler/Resources/*.js'
 
-  s.public_header_files = "HMWKWebViewHandler/Header/*.h"
+  s.public_header_files = 'HMWKWebViewHandler/Header/*.h'
 
   s.requires_arc = true
 
