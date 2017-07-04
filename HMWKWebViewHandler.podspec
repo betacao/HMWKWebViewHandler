@@ -24,8 +24,6 @@ TODO: JS & OC Calling Each Other
 
   s.resources    = 'HMWKWebViewHandler/Resources/*.js'
 
-  s.public_header_files = 'HMWKWebViewHandler/Header/*.h'
-
   s.requires_arc = true
 
 end
