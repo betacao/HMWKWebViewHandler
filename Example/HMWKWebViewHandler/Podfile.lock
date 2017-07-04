@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - HMWKWebViewHandler (0.0.2)
+  - HMWKWebViewHandler (0.0.3)
 
 DEPENDENCIES:
   - AFNetworking
@@ -26,12 +26,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HMWKWebViewHandler:
-    :commit: 7e938759dd0c543e9079cd8ceff77ef99eefc817
+    :commit: b197b6ec2e5f9256a5fcb2a26b3c422f528cde23
     :git: https://github.com/caochangxi/HMWKWebViewHandler.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  HMWKWebViewHandler: fd06c2b5f4bcd82155d6a222dce1baf008771e9b
+  HMWKWebViewHandler: aaf4a88563f36166fd81f7192530581f487cc533
 
 PODFILE CHECKSUM: 69618c5119b39ef585eb744f1ba739f05c7e92b8
 

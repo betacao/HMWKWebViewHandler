@@ -6,8 +6,9 @@
 //  Copyright © 2017 Beta_Cao. All rights reserved.
 //
 
+#ifndef _HMWKWebView_
+#define _HMWKWebView_
+
 #import "HMWKWebViewHandler.h"
 
-@implementation HMWKWebViewHandler
-
-@end
+#endif /* _HMWKWebView_ */

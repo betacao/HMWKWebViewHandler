@@ -1,21 +1,21 @@
 //
 //  HMWKWebViewHandler.h
-//  Pods
+//  HMWKWebViewHandler
 //
-//  Created by Beta_Cao on 17/07/04.
-//
+//  Created by Beta_Cao on 04/07/2017.
+//  Copyright © 2017 Beta_Cao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <webkit/webkit.h>
+#import <WebKit/WebKit.h>
 
-extern const NSString *EventHandler;
+@interface HMWKWebViewHandler : NSObject
 
-@interface HMWKWebViewHandler : NSObject<WKScriptMessageHandler>
-@property (nonatomic, weak) WKWebView *webView;
-	@property (nonatomic, strong) NSString  *handlerJS;
-	
+@property (strong, nonatomic) WKWebView *webView;
+@property (strong, nonatomic) NSString  *handlerJS;
+
 + (instancetype)shareInstance;
+
 + (void)getInject:(WKWebView *)webView;
-	
-	@end
+
+@end
