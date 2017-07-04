@@ -1,6 +1,0 @@
-framework module HMWKWebViewHandler {
-  umbrella header "HMWKWebViewHandler-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module Pods_HMWKWebViewHandler {
-  umbrella header "Pods-HMWKWebViewHandler-umbrella.h"
-
-  export *
-  module * { export * }
-}
