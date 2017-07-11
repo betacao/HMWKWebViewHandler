@@ -8,8 +8,6 @@
 
 #import "HMWKWebViewHandler.h"
 
-static NSString * const EventHandler = @"HMWKWebViewHandler";
-
 static HMWKWebViewHandler *handler= nil;
 
 @implementation HMWKWebViewHandler
@@ -46,7 +44,7 @@ static HMWKWebViewHandler *handler= nil;
 		NSDictionary *params = message.body[@"params"];
 		NSString *callBackName = message.body[@"callBackName"];
 		if (callBackName) {
-			__weak  WKWebView *weakWebView = _webView;
+			__weak  WKWebView *weakWebView = self.webView;
 			[self interactWitMethodName:methodName params:params:^(id response) {
 				NSString *js = [NSString stringWithFormat:@"HMWKWebViewHandler.callBack('%@',%@);",callBackName,response];
 				dispatch_async(dispatch_get_main_queue(), ^{

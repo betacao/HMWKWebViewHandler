@@ -8,4 +8,8 @@ pod 'AFNetworking'
 
 pod 'HMWKWebViewHandler'
 
+pod 'Masonry'
+
+pod 'YYKit'
+
 end

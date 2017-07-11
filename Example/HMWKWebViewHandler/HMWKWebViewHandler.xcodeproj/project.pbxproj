@@ -13,6 +13,7 @@
 		48B871431F0B8F8200F96ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B871411F0B8F8200F96ADD /* Main.storyboard */; };
 		48B871451F0B8F8200F96ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B871441F0B8F8200F96ADD /* Assets.xcassets */; };
 		48B871481F0B8F8200F96ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B871461F0B8F8200F96ADD /* LaunchScreen.storyboard */; };
+		48BFE8C81F1473C000C275DE /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 48BFE8C71F1473C000C275DE /* test.html */; };
 		AFF2A34965763F64536D1D8C /* Pods_HMWKWebViewHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C812A697EA0C2D60BE8E088E /* Pods_HMWKWebViewHandler.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		48B871441F0B8F8200F96ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B871471F0B8F8200F96ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B871491F0B8F8200F96ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48BFE8C71F1473C000C275DE /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		9388AFBFD4702177E7ACC3ED /* Pods-HMWKWebViewHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMWKWebViewHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HMWKWebViewHandler/Pods-HMWKWebViewHandler.debug.xcconfig"; sourceTree = "<group>"; };
 		C812A697EA0C2D60BE8E088E /* Pods_HMWKWebViewHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HMWKWebViewHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D64824324EAAC1BAEF6A3B /* Pods-HMWKWebViewHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMWKWebViewHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HMWKWebViewHandler/Pods-HMWKWebViewHandler.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				48B8713C1F0B8F8200F96ADD /* AppDelegate.m */,
 				48B8713E1F0B8F8200F96ADD /* ViewController.h */,
 				48B8713F1F0B8F8200F96ADD /* ViewController.m */,
+				48BFE8C71F1473C000C275DE /* test.html */,
 				48B871411F0B8F8200F96ADD /* Main.storyboard */,
 				48B871441F0B8F8200F96ADD /* Assets.xcassets */,
 				48B871461F0B8F8200F96ADD /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BFE8C81F1473C000C275DE /* test.html in Resources */,
 				48B871481F0B8F8200F96ADD /* LaunchScreen.storyboard in Resources */,
 				48B871451F0B8F8200F96ADD /* Assets.xcassets in Resources */,
 				48B871431F0B8F8200F96ADD /* Main.storyboard in Resources */,
@@ -391,6 +395,7 @@
 				48B8714E1F0B8F8200F96ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

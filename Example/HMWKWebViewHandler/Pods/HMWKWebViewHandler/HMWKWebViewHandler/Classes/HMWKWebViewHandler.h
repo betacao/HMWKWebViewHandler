@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-@interface HMWKWebViewHandler : NSObject
+static NSString * const EventHandler = @"HMWKWebViewHandler";
+
+@interface HMWKWebViewHandler : NSObject<WKScriptMessageHandler>
 
 @property (strong, nonatomic) WKWebView *webView;
 @property (strong, nonatomic) NSString  *handlerJS;
