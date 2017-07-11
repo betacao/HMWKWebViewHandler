@@ -20,10 +20,16 @@ TODO: JS & OC Calling Each Other
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'HMWKWebViewHandler/Classes/*.{h,m}'
+  s.source_files  = "Classes", "HMWKWebViewHandler/Classes/*.{h,m}"
 
-  s.resources    = 'HMWKWebViewHandler/Resources/*.js'
+  s.resources  = "Resources", "HMWKWebViewHandler/Resources/*"
+
+  s.public_header_files = "Headers", "HMWKWebViewHandler/Headers/*.h"
 
   s.requires_arc = true
 
+  s.dependency "YYKit"
+  s.dependency "Masonry"
+  s.dependency "AFNetworking"
+  
 end
