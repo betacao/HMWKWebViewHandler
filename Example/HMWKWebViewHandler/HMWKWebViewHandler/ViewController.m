@@ -43,7 +43,7 @@
 	
 	WKUserContentController *controller = [[WKUserContentController alloc] init];
 	[controller addUserScript:script];
-	[controller addScriptMessageHandler:[HMWKWebViewHandler shareInstance] name:@""];
+	[controller addScriptMessageHandler:[HMWKWebViewHandler shareInstance] name:EventHandler];
 	
 	configuration.preferences = preferences;
 	configuration.processPool = processPool;
@@ -80,16 +80,18 @@
 {
 	@weakify(self)
 	[self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.width.mas_equalTo(weak_self.view.width);
-		make.height.mas_equalTo(weak_self.view.height);
+		make.size.mas_equalTo(weak_self.view.size);
+	}];
+	[self.progressView mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.size.mas_equalTo(weak_self.view.size);
 	}];
 }
 
 - (void)hideProgressView
 {
 	if (!self.webView.loading) {
-		[UIView animateWithDuration:0.5 animations:^{
-			self.progressView.alpha = 0;
+		[UIView animateWithDuration:0.5f animations:^{
+			self.progressView.alpha = 0.0f;
 		}];
 	}
 }

@@ -8,6 +8,8 @@
 
 #import "HMWKWebViewHandler.h"
 
+NSString *EventHandler = @"HMWKWebViewHandler";
+
 static HMWKWebViewHandler *handler= nil;
 
 @implementation HMWKWebViewHandler
@@ -36,8 +38,7 @@ static HMWKWebViewHandler *handler= nil;
 }
 
 #pragma mark - WKScriptMessageHandler
-- (void)userContentController:(WKUserContentController *)userContentController
-	  didReceiveScriptMessage:(WKScriptMessage *)message
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
 	if ([message.name isEqualToString:EventHandler]) {
 		NSString *methodName = message.body[@"methodName"];
@@ -45,7 +46,7 @@ static HMWKWebViewHandler *handler= nil;
 		NSString *callBackName = message.body[@"callBackName"];
 		if (callBackName) {
 			__weak  WKWebView *weakWebView = self.webView;
-			[self interactWitMethodName:methodName params:params:^(id response) {
+			[self interactWithMethodName:methodName params:params:^(id response) {
 				NSString *js = [NSString stringWithFormat:@"HMWKWebViewHandler.callBack('%@',%@);",callBackName,response];
 				dispatch_async(dispatch_get_main_queue(), ^{
 					[weakWebView evaluateJavaScript:js completionHandler:^(id _Nullable data, NSError * _Nullable error) {
@@ -53,42 +54,40 @@ static HMWKWebViewHandler *handler= nil;
 					}];
 				});
 			}];
-		}else{
-			[self interactWitMethodName:methodName params:params :nil];
+		} else {
+			[self interactWithMethodName:methodName params:params :nil];
 		}
 	}
 }
 
-- (void)interactWitMethodName:(NSString *)methodName params:(NSDictionary *)params :(void(^)(id response))callBack
+- (void)interactWithMethodName:(NSString *)methodName params:(NSDictionary *)params :(void(^)(id response))callBack
 {
 	if (params) {
 		methodName = [NSString stringWithFormat:@"%@:",methodName];
 		if (callBack) {
-			methodName = [NSString stringWithFormat:@"%@:",methodName];
-			SEL selector =NSSelectorFromString(methodName);
-			NSArray *paramArray =@[params,callBack];
+			methodName = [methodName stringByAppendingString:@"block:"];
+			SEL selector = NSSelectorFromString(methodName);
+			NSArray *paramArray = @[params,callBack];
 			if ([self respondsToSelector:selector]) {
 				[self HMPerformSelector:selector withObjects:paramArray];
 			}
 		} else {
-			SEL selector =NSSelectorFromString(methodName);
-			NSArray *paramArray =@[params];
+			SEL selector = NSSelectorFromString(methodName);
+			NSArray *paramArray = @[params];
 			if ([self respondsToSelector:selector]) {
 				[self HMPerformSelector:selector withObjects:paramArray];
 			}
-			
 		}
 	} else {
 		if (callBack) {
-			methodName = [NSString stringWithFormat:@"%@:",methodName];
-			SEL selector =NSSelectorFromString(methodName);
-			NSArray *paramArray =@[callBack];
+			methodName = [methodName stringByAppendingString:@"block:"];
+			SEL selector = NSSelectorFromString(methodName);
+			NSArray *paramArray = @[callBack];
 			if ([self respondsToSelector:selector]) {
 				[self HMPerformSelector:selector withObjects:paramArray];
 			}
 		} else {
-			SEL selector =NSSelectorFromString(methodName);
-			
+			SEL selector = NSSelectorFromString(methodName);
 			if ([self respondsToSelector:selector]) {
 				[self HMPerformSelector:selector withObjects:nil];
 			}
