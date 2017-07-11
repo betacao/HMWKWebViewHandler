@@ -24,8 +24,6 @@ TODO: JS & OC Calling Each Other
 
   s.resources  = "Resources", "HMWKWebViewHandler/Resources/*"
 
-  s.public_header_files = "Headers", "HMWKWebViewHandler/Headers/*.h"
-
   s.requires_arc = true
 
   s.dependency "YYKit"
