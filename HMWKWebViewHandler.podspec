@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HMWKWebViewHandler"
 
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
 
   s.summary      = "JS & OC"
 
@@ -25,9 +25,5 @@ TODO: JS & OC Calling Each Other
   s.resources  = "Resources", "HMWKWebViewHandler/Resources/*"
 
   s.requires_arc = true
-
-  s.dependency "YYKit"
-  s.dependency "Masonry"
-  s.dependency "AFNetworking"
   
 end

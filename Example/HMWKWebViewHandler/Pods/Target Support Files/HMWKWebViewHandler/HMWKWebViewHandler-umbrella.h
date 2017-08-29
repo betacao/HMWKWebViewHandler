@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "HMWKWebView.h"
 #import "HMWKWebViewHandler.h"
 
 FOUNDATION_EXPORT double HMWKWebViewHandlerVersionNumber;

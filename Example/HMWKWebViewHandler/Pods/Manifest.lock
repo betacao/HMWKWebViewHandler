@@ -14,24 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - HMWKWebViewHandler (0.0.3)
+  - HMWKWebViewHandler (0.0.4):
+    - AFNetworking
+    - Masonry
+    - YYKit
   - Masonry (1.0.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - AFNetworking
   - HMWKWebViewHandler
-  - Masonry
-  - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  HMWKWebViewHandler: aaf4a88563f36166fd81f7192530581f487cc533
+  HMWKWebViewHandler: 1c50631170f3bc1cff6379031ef96aa79cf3dadd
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 1c9078d2006718f371e1592fef09cc7bac2780f3
+PODFILE CHECKSUM: eb6268813b3eae9081bda88cfe09f10b456c46b9
 
 COCOAPODS: 1.2.1

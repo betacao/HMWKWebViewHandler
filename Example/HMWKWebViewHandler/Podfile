@@ -3,13 +3,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'HMWKWebViewHandler' do
-	
-pod 'AFNetworking'
 
 pod 'HMWKWebViewHandler'
-
-pod 'Masonry'
-
-pod 'YYKit'
 
 end
